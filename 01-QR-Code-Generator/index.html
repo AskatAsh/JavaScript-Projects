@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <h1>QR Code Generator</h1>
+      <div id="inputContainer">
+        <input
+          type="text"
+          placeholder="Paste or Write your link here..."
+          name="linkInput"
+          id="linkInput"
+        />
+        <button id="generateBtn">Click Here to Generate QR Code</button>
+      </div>
+      <div id="qrCodeContainer">
+        <img
+          src="https://e7.pngegg.com/pngimages/144/829/png-clipart-qr-code-information-qr-code-android-qrcode-text-rectangle-thumbnail.png"
+          alt="Image of Qr Code of the URL"
+          width="100%"
+          id="qrImg"
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    color: #333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+#container{
+    width: 40%;
+    border: 2px solid #333;
+    padding: 1rem;
+    border-radius: 5px;
+}
+h1{
+    margin: 20px 0px 30px 0px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#inputContainer{
+    position: relative;
+}
+#label{
+    font-size: small;
+    position: absolute;
+    padding: 3px;
+    background-color: antiquewhite;
+    top: -10px;
+    left: 10px;
+}
+#passwordField{
+    font-size: 1.25rem;
+    padding: 15px 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    width: 100%;
+}
+#passwordField:focus{
+    outline: none;
+}
+#outputContainer{
+    padding-top: 10px;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.highlight{
+    color: green;
+    font-weight: bold;
+}
+.displayNone{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #container{
+        width: 100%;
+        margin: 5px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    #passwordField{
+        font-size: 1rem;
+    }
+}
