@@ -6,18 +6,16 @@ body{
     background-color: antiquewhite;
     color: #333;
 }
-main{
-    max-width: 600px;
-    text-align: center;
-    /* border: 1px solid #ccc; */
-    margin: 50px auto;
-}
 #show-modal-btn, #close-modal-btn{
     font-size: 1.25rem;
     padding: 10px 20px;
     font-weight: bold;
     border: 2px solid #333;
     color: #333;
+}
+#show-modal-btn{
+    display: block;
+    margin: 30px auto;
 }
 #close-modal-btn:hover{
     background-color: #ffaeae;
@@ -31,6 +29,9 @@ main{
     display: none;
 }
 #modal{
+    max-width: 360px;
+    width: 80vw;
+    text-align: center;
     background-color: #fff;
     position: absolute;
     top: 50%;
