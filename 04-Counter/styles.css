@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(240, 255, 241);
+}
+main{
+    max-width: 500px;
+    padding: 20px;
+    margin: 10px auto;
+}
+h1, button, div{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px auto;
+}
+h1, #reset-btn{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.output{
+    margin-top: 50px;
+    font-size: 5rem;
+}
+label{
+    font-size: 1rem;
+}
+input{
+    width: 4.5rem;
+    font-size: 1.25rem;
+    padding: 5px;
+    font-weight: bold;
+}
+button{
+    width: 4rem;
+    height: 4rem;
+    border: 0;
+    background-color: rgb(120, 253, 138);
+    cursor: pointer;
+}
+.buttons button:first-of-type{
+    background-color: rgb(252, 151, 151);
+}
+#reset-btn{
+    width: 8rem;
+    height: 4rem;
+    display: block;
+    background-color: rgb(152, 205, 251);
+    margin: 50px auto;
+    font-size: 1.25rem;
+}
