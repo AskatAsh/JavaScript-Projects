@@ -30,6 +30,10 @@ section{
     padding: 5px 10px;
     font-size: 1.25rem;
 }
+#toast-options select option{
+    padding: 10px;
+    font-size: 1.25rem;
+}
 #toast-options #toast-text{
     width: 100%;
 }

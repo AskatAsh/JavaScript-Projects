@@ -10,48 +10,50 @@ const show_toast_button = document.getElementById("show-toast-btn"),
   show_duration = document.getElementById("show-duration"),
   text_error = document.getElementById("text-error");
 
-
+// show duration when input range is changed
 show_duration.innerHTML = `[ ${toast_duration.value}s ]`;
 toast_duration.addEventListener("change", () => {
   show_duration.innerHTML = `[ ${toast_duration.value}s ]`;
 });
 
 // add new classes and romove old classes in toast element
-const checkChanges = () => {
+const updateToastClasses = () => {
+  toast.classList.remove("toast-show");
   toast.className = "";
-  toast.className = `${horizontal_toast_positon.value} ${vertical_toast_position.value} ${toast_option_type.value}`;
+  toast.classList.add(
+    horizontal_toast_positon.value,
+    vertical_toast_position.value,
+    toast_option_type.value
+  );
+  // toast.className = `${horizontal_toast_positon.value} ${vertical_toast_position.value} ${toast_option_type.value}`;
 };
 
 // Checks if the text input is empty or not
 const checkTextMessage = (messageInput) => {
-  if (messageInput == "" || !messageInput) {
-    return false;
-  } else {
-    return true;
-  }
+  return messageInput.trim() !== "";
 };
 
 // shows this error if the text input is empty
 const showError = () => {
-    text_error.style.display = 'block';
+  text_error.style.display = "block";
 };
 
 // hides the error message when user writes something
-toast_message_input.addEventListener('input', ()=>{
-    text_error.style.display = 'none';
-})
+toast_message_input.addEventListener("input", () => {
+  text_error.style.display = "none";
+});
 
 // show toast popUp on clicking show toast button
 show_toast_button.addEventListener("click", function (e) {
   e.preventDefault();
+  updateToastClasses();
 
-  checkChanges();
   if (checkTextMessage(toast_message_input.value)) {
     toast_text.textContent = toast_message_input.value;
     toast.classList.add("toast-show");
     setTimeout(() => {
       toast.classList.remove("toast-show");
-    }, +toast_duration.value * 1000);
+    }, toast_duration.value * 1000);
   } else {
     showError();
   }
