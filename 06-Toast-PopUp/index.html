@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast PopUp</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Toast PopUp</h1>
+      <section>
+        <form id="toast-options">
+          <div class="horizontal-position">
+            <select name="select-h-pos" id="horizontal-options">
+              <option value="left" selected>Left</option>
+              <option value="center">Center</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+          <div class="vertical-position">
+            <select name="select-v-pos" id="vertical-options">
+              <option value="top" selected>Top</option>
+              <option value="bottom">Bottom</option>
+            </select>
+          </div>
+          <div class="toast-type">
+            <select name="select-toast-type" id="toast-type-options">
+              <option value="success" selected>Success</option>
+              <option value="error">Error</option>
+              <option value="warning">Warning</option>
+              <option value="info">Info</option>
+            </select>
+          </div>
+          <div class="toast-message">
+            <input
+              type="text"
+              name="toast-text"
+              id="toast-text"
+              value="This is a toast message..!"
+            />
+            <p id="text-error">Please enter a valid message..!</p>
+          </div>
+          <div class="toast-duration">
+            <label for="toast-delay"
+              >
+              <span>Duration <span id="show-duration"></span>:</span></label
+            >
+            <input
+              type="range"
+              name="toast-duration"
+              id="toast-delay"
+              min="1"
+              max="10"
+              value="3"
+            />
+          </div>
+          <button id="show-toast-btn">Show Toast</button>
+        </form>
+      </section>
+
+      <div id="toast" class="top left success">
+        <span id="toast-para">This is a toast message..!</span>
+        <span id="toast-close">X</span>
+      </div>
+    </main>
+  </body>
+</html>
