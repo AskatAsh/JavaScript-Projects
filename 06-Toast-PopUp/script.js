@@ -12,8 +12,8 @@ const show_toast_button = document.getElementById("show-toast-btn"),
 
 // show duration when input range is changed
 show_duration.innerHTML = `[ ${toast_duration.value}s ]`;
-toast_duration.addEventListener("change", () => {
-  show_duration.innerHTML = `[ ${toast_duration.value}s ]`;
+toast_duration.addEventListener("input", () => {
+  show_duration.innerHTML = `[ ${Math.floor(toast_duration.value)}s ]`;
 });
 
 // add new classes and romove old classes in toast element
