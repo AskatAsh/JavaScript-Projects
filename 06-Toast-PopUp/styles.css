@@ -69,7 +69,7 @@ section{
     border: none;
     box-shadow: 1px 3px 10px #ccc;
 }
-#toast .toast-show {
+#toast.toast-show {
     visibility: visible;
 }
 #toast-close{
